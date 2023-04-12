@@ -9,3 +9,13 @@ echo "EDXAPP_THEME=GCOpenEDXTheme" > "$(tutor config printroot)/env/dev"
 
 tutor local start --mount "lms:$PWD:/openedx/themes/GCOpenEDXTheme" bash -c "cd /openedx/themes/GCOpenEDXTheme && paver watch_assets lms --settings=tutor.production"
 
+## Start Develop Theme
+
+Run:
+```
+cd ~/.local/share/tutor/env/build/openedx/theme/GCOpenEDXTheme
+code .
+tutor local start --mount "lms:$PWD:/openedx/themes/GCOpenEDXTheme"
+```
+
+Modify something in code editor, wait compile, refresh page.
